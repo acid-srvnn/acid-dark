@@ -2,19 +2,33 @@ import { DarkEvent } from "./models/interfaces/darkEvent";
 
 export class Parser {
 
-    static monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+    static monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
     ];
 
     static getDateHtml(event: DarkEvent): string | Element | JQuery<HTMLElement> | DocumentFragment | (Element | DocumentFragment)[] {
         let returnStr = "" +
-            "<div class='timeline-date'>" +
-            "%%DATESTR%%" +
-            "</div>" +
-            "<div id='%%DATE%%' class='row'>" +
+            "<div class='timeline-section'>" +
+            "   <div class='timeline-date'>" +
+            "   %%DATESTR%%" +
+            "   </div>" +
+            "   <div id='%%DATE%%' class='row'>" +
+            "   </div>" +
             "</div>";
         let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
-        let date = "date_" + worldTimeInMillis.getDate();
+        let monthAndYear = "my_" + worldTimeInMillis.getMonth() + worldTimeInMillis.getFullYear();
+        let date = "date_" + worldTimeInMillis.getDate() + "_" + monthAndYear;
         let dateStr = Parser.monthNames[worldTimeInMillis.getMonth()] + " " + worldTimeInMillis.getDate().toString() + ", " + worldTimeInMillis.getFullYear();
         returnStr = returnStr.replace("%%DATESTR%%", dateStr);
         returnStr = returnStr.replace("%%DATE%%", date);
@@ -23,10 +37,8 @@ export class Parser {
     }
     static getMonthAndYearHtml(event: DarkEvent): string {
         let returnStr = "" +
-            "<div class='timeline-month'>" +
+            "<div id='%%ID%%' class='timeline-month'>" +
             "%%MONTHANDYEAR%%" +
-            "</div>" +
-            "<div id='%%ID%%' class='timeline-section'>" +
             "</div>";
         let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
         let monthAndYear = "my_" + worldTimeInMillis.getMonth() + worldTimeInMillis.getFullYear();
@@ -48,7 +60,7 @@ export class Parser {
             "           <a class='btn btn-xs btn-default pull-right' > Details </a>" +
             "           <div class='box-item'> <strong> </strong> %%DESCRIPTION%% </div>" +
             "       </div>" +
-            "       <div class='box-footer'> </div>" +
+            "       <div class='box-footer'> Dark </div>" +
             "   </div>" +
             "</div>";
         returnStr = returnStr.replace("%%TITLE%%", event.title);

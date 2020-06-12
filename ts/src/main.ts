@@ -22,6 +22,10 @@ let events: DarkEvent[] = [];
 events = events.concat((new Episode1).getEvents());
 events = events.concat((new Episode2).getEvents());
 
+events.sort((a, b) => {
+  return (a.worldTimeInMillis > b.worldTimeInMillis) ? 1 : -1
+});
+
 events.forEach(event => {
 
   let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
@@ -31,10 +35,10 @@ events.forEach(event => {
     $('#dark-container .timeline').append(Parser.getMonthAndYearHtml(event))
   }
 
-  let date = "date_" + worldTimeInMillis.getDate();
+  let date = "date_" + worldTimeInMillis.getDate() + "_" + monthAndYear;
 
   if (!$("#" + date).length) {
-    $("#" + monthAndYear).append(Parser.getDateHtml(event))
+    $('#dark-container .timeline').append(Parser.getDateHtml(event))
   }
 
   $("#" + date).append(Parser.getEventHtml(event));
