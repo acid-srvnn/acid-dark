@@ -1,0 +1,59 @@
+import { DarkEvent } from "./models/interfaces/darkEvent";
+
+export class Parser {
+
+    static monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    static getDateHtml(event: DarkEvent): string | Element | JQuery<HTMLElement> | DocumentFragment | (Element | DocumentFragment)[] {
+        let returnStr = "" +
+            "<div class='timeline-date'>" +
+            "%%DATESTR%%" +
+            "</div>" +
+            "<div id='%%DATE%%' class='row'>" +
+            "</div>";
+        let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
+        let date = "date_" + worldTimeInMillis.getDate();
+        let dateStr = Parser.monthNames[worldTimeInMillis.getMonth()] + " " + worldTimeInMillis.getDate().toString() + ", " + worldTimeInMillis.getFullYear();
+        returnStr = returnStr.replace("%%DATESTR%%", dateStr);
+        returnStr = returnStr.replace("%%DATE%%", date);
+        console.log("Sending html " + returnStr);
+        return returnStr;
+    }
+    static getMonthAndYearHtml(event: DarkEvent): string {
+        let returnStr = "" +
+            "<div class='timeline-month'>" +
+            "%%MONTHANDYEAR%%" +
+            "</div>" +
+            "<div id='%%ID%%' class='timeline-section'>" +
+            "</div>";
+        let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
+        let monthAndYear = "my_" + worldTimeInMillis.getMonth() + worldTimeInMillis.getFullYear();
+        let monthAndYearStr = Parser.monthNames[worldTimeInMillis.getMonth()] + ", " + worldTimeInMillis.getFullYear();
+        returnStr = returnStr.replace("%%MONTHANDYEAR%%", monthAndYearStr);
+        returnStr = returnStr.replace("%%ID%%", monthAndYear);
+        console.log("Sending html " + returnStr);
+        return returnStr;
+    }
+    public static getEventHtml(event: DarkEvent): string {
+        let returnStr = "" +
+            "<div class='col-sm-4'>" +
+            "   <div class='timeline-box'>" +
+            "       <div class='box-title'>" +
+            "           <i class='fa fa-asterisk text-success' aria - hidden='true' > </i>" +
+            "           %%TITLE%%" +
+            "       </div>" +
+            "       <div class='box-content'>" +
+            "           <a class='btn btn-xs btn-default pull-right' > Details </a>" +
+            "           <div class='box-item'> <strong> </strong> %%DESCRIPTION%% </div>" +
+            "       </div>" +
+            "       <div class='box-footer'> </div>" +
+            "   </div>" +
+            "</div>";
+        returnStr = returnStr.replace("%%TITLE%%", event.title);
+        returnStr = returnStr.replace("%%DESCRIPTION%%", event.description);
+        console.log("Sending html " + returnStr);
+        return returnStr;
+    }
+}
