@@ -6,16 +6,43 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="favicon.ico">
 
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 
+	<script src="assets/js/jquery.min.js"></script>
+
 	<script>
+
 		function resizeIframe(obj) {
-			obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+			obj.style.height = (window.innerHeight - $('#header').height() - 8) + 'px';
 		}
+
+		function loadUrl(url, showId, hideId) {
+			$('#dark-body').attr('src', url);
+		}
+
+		$(document).ready(function () {
+			loadUrl('https://dark.netflix.io/');
+		});
+
 	</script>
+
+	<style>
+		.fanmade {
+			left: 140px;
+			position: relative;
+			top: 1px;
+			width: 110px;
+		}
+
+		#dark-body {
+			width: 100%;
+			margin-top: 60px
+		}
+	</style>
 
 </head>
 
@@ -29,41 +56,45 @@
 						alt="DARK" class="Header__DarkLogo-sc-1w29h1v-4 jTiiJZ">
 				</a>
 			</h1>
+			<div class='fanmade'>
+				F A N M A D E
+			</div>
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="acid/events.html" target="dark-body">Family Tree</a></li>
-					<li><a href="acid/events.html" target="dark-body">Time Travel</a></li>
-					<li><a href="https://dark.netflix.io/" target="_blank">Official Site</a></li>
-					<li><a href="acid/events.html" class="button primary" target="dark-body">Timeline</a></li>
+					<li>
+						<a href="index.html">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="loadUrl('acid/events.html')">
+							Family Tree
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="loadUrl('acid/events.html')">
+							Time Travel
+						</a>
+					</li>
+					<li>
+						<a href="https://dark.netflix.io/" target="_blank">
+							Official Site
+						</a>
+					</li>
+					<li>
+						<a href="#" class="button primary" onclick="loadUrl('acid/events.html')">
+							Timeline
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<iframe name='dark-body' frameborder="0" scrolling="no" onload="resizeIframe(this)"
-			style="width: 100%;margin-top: 60px;"></iframe>
-
-
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</footer>
+		<iframe id='dark-body' onload="resizeIframe(this)"></iframe>
 
 	</div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
+
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
