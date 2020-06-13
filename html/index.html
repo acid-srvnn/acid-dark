@@ -1,28 +1,76 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Dark</title>
+	<title>Dark</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="app.css">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+	<script>
+		function resizeIframe(obj) {
+			obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+		}
+	</script>
+
 </head>
 
-<body>
-  <div id="output"></div>
+<body class="is-preload landing">
+	<div id="page-wrapper">
 
-  <div id='dark-container' class="container">
-    <div class="timeline">
+		<header id="header">
+			<h1 id="logo" style="width: 90px;height: 13px;">
+				<a href="index.html">
+					<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2NjQuMiA4MS42IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2NjQuMiA4MS42OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yOC4zLDAuNkgtMC4xdjgxaDI5LjRjMTMuOCwwLDI0LjQtMy44LDMxLjktMTEuNXMxMS4yLTE3LjMsMTEuMi0yOWMwLTExLjktMy44LTIxLjctMTEuMy0yOS4yCglTNDIuNywwLjYsMjguMywwLjZMMjguMywwLjZ6IE01NS4zLDY2LjdjLTcsNi40LTE1LjcsOS42LTI2LjIsOS42SDYuMlY1LjdoMjIuNGMxMC45LDAsMTkuOCwzLjMsMjYuNyw5LjlzMTAuMywxNS4xLDEwLjMsMjUuNQoJQzY1LjcsNTEuNyw2Mi4zLDYwLjMsNTUuMyw2Ni43eiBNMjM1LjEsMGwtMzcuNCw4MS42aDYuNmwxMi44LTI4aDM5LjZsMTIuOCwyOGg2LjZMMjM4LjcsMEgyMzUuMXogTTIxOS40LDQ4LjRsMTcuNC0zOC4xbDE3LjUsMzguMQoJSDIxOS40eiBNNDQ2LjIsNDEuMmMxMC4zLTMuOCwxNS40LTEwLjQsMTUuNC0xOS43YzAtNi40LTIuMy0xMS41LTYuOS0xNS4zcy0xMS4yLTUuNy0xOS45LTUuN2gtMjAuN3Y4MWg2LjNWNDIuNmgxMQoJYzUuMSwwLDguOSwwLjksMTEuNSwyLjhjMi42LDEuOCw2LjMsNi41LDExLDEzLjlMNDY4LDgxLjVoNy40bC0xOC4zLTI4QzQ1Mi41LDQ2LjYsNDQ4LjgsNDIuNSw0NDYuMiw0MS4yeiBNNDMzLjcsMzcuNWgtMTMuNFY1LjgKCWgxMy4yYzYuOSwwLDEyLjIsMS40LDE1LjgsNC4yYzMuNywyLjgsNS41LDYuNyw1LjUsMTEuN2MwLDUuMS0xLjgsOS01LjQsMTEuN0M0NDUuOCwzNi4xLDQ0MC42LDM3LjUsNDMzLjcsMzcuNUw0MzMuNywzNy41egoJIE02MjEuNyw0MS4xbDM4LjgtNDAuNWgtNy44bC0zOC45LDQwLjNWMC42aC02LjN2ODFoNi4zVjQxLjFsNDIuNCw0MC41aDhMNjIxLjcsNDEuMUw2MjEuNyw0MS4xeiIvPgo8L3N2Zz4K"
+						alt="DARK" class="Header__DarkLogo-sc-1w29h1v-4 jTiiJZ">
+				</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="acid/events.html" target="dark-body">Family Tree</a></li>
+					<li><a href="acid/events.html" target="dark-body">Time Travel</a></li>
+					<li><a href="https://dark.netflix.io/" target="_blank">Official Site</a></li>
+					<li><a href="acid/events.html" class="button primary" target="dark-body">Timeline</a></li>
+				</ul>
+			</nav>
+		</header>
 
-    </div>
-  </div>
+		<iframe name='dark-body' frameborder="0" scrolling="no" onload="resizeIframe(this)"
+			style="width: 100%;margin-top: 60px;"></iframe>
 
 
-  <script src="main-bundle.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
 
+	</div>
 
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 

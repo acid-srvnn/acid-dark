@@ -16,7 +16,7 @@ export class Episode2 extends EventsProvider {
 
         let event2: DarkEvent = {
             title: 'Hannah cheats everyone',
-            description: ':p',
+            description: 'zxcv asdf',
             persons: [],
             timeTravels: [],
             worldTimeInMillis: new Date("11/23/1987 16:00:00").getTime(),

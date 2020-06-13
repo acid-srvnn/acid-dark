@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: "[name]-bundle.js",
+    filename: "acid/[name]-bundle.js",
   },
   resolve: {
     // Add ".ts" and ".tsx" as resolvable extensions.
