@@ -151,7 +151,7 @@ export class DarkPersons {
     }
 
     static charlotteDoppler: DarkPerson = {
-        name: "Charlotter Doppler",
+        name: "Charlotte Doppler",
         family: DarkFamily.Doppler,
         photos: [],
         father: undefined, //TODO

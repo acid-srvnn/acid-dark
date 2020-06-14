@@ -113,7 +113,7 @@ export class Parser {
         } else if (person.person.photos[2]) {
             return person.person.photos[2].url;
         } else {
-            return '/acid/assets/unknownperson.jpg';
+            return 'assets/unknownperson.jpg';
         }
     }
 }
