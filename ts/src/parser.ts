@@ -1,4 +1,8 @@
 import { DarkEvent } from "./models/interfaces/darkEvent";
+import { DarkPersonInDarkEvent } from "./models/interfaces/darkPersonIndarkEvent";
+import { TimeTravel } from "./models/interfaces/timeTravel";
+import { TimeTravelInDarkEvent } from "./models/interfaces/timeTravelInDarkEvent";
+import { TimeTravelType } from "./models/constants/enum/timeTravelType";
 
 export class Parser {
 
@@ -56,16 +60,60 @@ export class Parser {
             "           <i class='fa fa-asterisk text-success' aria - hidden='true' > </i>" +
             "           %%TITLE%%" +
             "       </div>" +
-            "       <div class='box-content'>" +
+            "       <div class='box-content' style='height:100px'>" +
             "           <a class='btn btn-xs btn-default pull-right' > Details </a>" +
-            "           <div class='box-item'> <strong> </strong> %%DESCRIPTION%% </div>" +
+            "           <div class='box-item'> %%DESCRIPTION%% </div>" +
             "       </div>" +
-            "       <div class='box-footer'> Dark </div>" +
+            "       %%TIMETRAVELS%%" +
+            "       <div class='box-footer'> %%PERSONS%% </div>" +
             "   </div>" +
             "</div>";
         returnStr = returnStr.replace("%%TITLE%%", event.title);
-        returnStr = returnStr.replace("%%DESCRIPTION%%", event.description);
+        let des = event.description;
+        if (des.length > 100) {
+            des = des.substring(0, 100) + '...'
+        }
+        returnStr = returnStr.replace("%%DESCRIPTION%%", des);
+        let timeTravels = '';
+        if (event.timeTravels) {
+            event.timeTravels.forEach(timeTravel => {
+                timeTravels = timeTravels + Parser.getTimeTravelHtml(timeTravel);
+            });
+        }
+        returnStr = returnStr.replace("%%TIMETRAVELS%%", timeTravels);
+        let persons = '';
+        event.persons.forEach(person => {
+            persons = persons + '<img src="' + Parser.getPersonImage(person) + '" style="padding: 1px;width: 30px;height: 30px;" title="' + person.person.name + '"> ';
+        });
+        returnStr = returnStr.replace("%%PERSONS%%", persons);
         console.log("Sending html " + returnStr);
         return returnStr;
+    }
+    static getTimeTravelHtml(timeTravel: TimeTravelInDarkEvent) {
+        let returnStr = "" +
+            "<div class='%%CLASS%%' > %%PERSONS%% </div>";
+        let persons = '';
+        timeTravel.timeTravel.persons.forEach(person => {
+            persons = persons + '<img src="' + Parser.getPersonImage(person) + '" style="padding: 1px;width: 30px;height: 30px;" title="' + person.person.name + '"> ';
+        });
+        returnStr = returnStr.replace("%%PERSONS%%", persons);
+        if (timeTravel.type == TimeTravelType.in) {
+            returnStr = returnStr.replace("%%CLASS%%", 'box-footer-time-in');
+        } else {
+            returnStr = returnStr.replace("%%CLASS%%", 'box-footer-time-out');
+        }
+        return returnStr;
+    }
+
+    static getPersonImage(person: DarkPersonInDarkEvent): string {
+        if (person.person.photos[1]) {
+            return person.person.photos[1].url;
+        } else if (person.person.photos[0]) {
+            return person.person.photos[0].url;
+        } else if (person.person.photos[2]) {
+            return person.person.photos[2].url;
+        } else {
+            return '/acid/assets/unknownperson.jpg';
+        }
     }
 }

@@ -92,4 +92,86 @@ export class DarkPersons {
         mother: DarkPersons.katarinaNielsen,
         altName: ["Michael Khanwald"]
     }
+
+    static inesKahnwald: DarkPerson = {
+        name: "Ines Kahnwald",
+        family: DarkFamily.Kahnwald,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
+
+    static michaelKahnwald: DarkPerson = {
+        name: "Michael Kahnwald",
+        family: DarkFamily.Kahnwald,
+        photos: [],
+        father: undefined, //TODO
+        mother: DarkPersons.inesKahnwald
+    }
+
+    static hannahKahnwald: DarkPerson = {
+        name: "Hannah Kahnwald",
+        family: DarkFamily.Kahnwald,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
+
+    static jonasKahnwald: DarkPerson = {
+        name: "Jonas Kahnwald",
+        family: DarkFamily.Kahnwald,
+        photos: [],
+        father: DarkPersons.michaelKahnwald,
+        mother: DarkPersons.hannahKahnwald
+    }
+
+    static helgeDoppler: DarkPerson = {
+        name: "Helge Doppler",
+        family: DarkFamily.Doppler,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined //TODO
+    }
+
+    static peterDoppler: DarkPerson = {
+        name: "Peter Doppler",
+        family: DarkFamily.Doppler,
+        photos: [],
+        father: DarkPersons.helgeDoppler,
+        mother: undefined
+    }
+
+
+    static bartoszTiedemann: DarkPerson = {
+        name: "Bartosz Tiedemann",
+        family: DarkFamily.Tiedemann,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
+
+    static charlotteDoppler: DarkPerson = {
+        name: "Charlotter Doppler",
+        family: DarkFamily.Doppler,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
+
+    static franziskaDoppler: DarkPerson = {
+        name: "Franziska Doppler",
+        family: DarkFamily.Doppler,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
+
+
+    static reginaTiedemann: DarkPerson = {
+        name: "Regina Tiedemann",
+        family: DarkFamily.Tiedemann,
+        photos: [],
+        father: undefined, //TODO
+        mother: undefined
+    }
 }

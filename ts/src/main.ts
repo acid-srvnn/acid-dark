@@ -1,22 +1,9 @@
 /// <reference path="../../node_modules/@types/jquery/JQuery.d.ts" />
 
-import template from 'lodash/template';
 import { Episode1 } from './events/season1/episode1';
 import { DarkEvent } from './models/interfaces/darkEvent';
 import { Episode2 } from './events/season1/episode2';
 import { Parser } from './parser';
-
-
-
-const outputElement = document.getElementById('output');
-if (outputElement) {
-  var compiled = template(`
-    Built at: <%- dateTimeString %>
-  `.trim());
-  outputElement.innerHTML = compiled({
-    dateTimeString: new Date().toISOString(),
-  });
-}
 
 let events: DarkEvent[] = [];
 events = events.concat((new Episode1).getEvents());

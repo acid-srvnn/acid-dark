@@ -150,7 +150,23 @@
   padding: 5px 15px;
   border-top: 1px solid #17191B;
   background-color: #444950;
-  text-align: right;
+  text-align: left;
+  font-style: italic;
+}
+
+.box-footer-time-in {
+  padding: 5px 15px;
+  border-top: 1px solid #17191B;
+  background-color: #24462b;
+  text-align: left;
+  font-style: italic;
+}
+
+.box-footer-time-out {
+  padding: 5px 15px;
+  border-top: 1px solid #17191B;
+  background-color: #463124;
+  text-align: left;
   font-style: italic;
 }
 

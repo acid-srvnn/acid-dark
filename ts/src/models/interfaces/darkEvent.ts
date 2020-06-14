@@ -1,5 +1,6 @@
 import { TimeTravel } from "./timeTravel";
 import { DarkPersonInDarkEvent } from "./darkPersonIndarkEvent";
+import { TimeTravelInDarkEvent } from "./timeTravelInDarkEvent";
 
 export interface DarkEvent {
     title: string,
@@ -7,5 +8,5 @@ export interface DarkEvent {
     worldTimeInMillis: number,
     episodeTime: number,
     persons: DarkPersonInDarkEvent[],
-    timeTravels: TimeTravel[]
+    timeTravels?: TimeTravelInDarkEvent[]
 }

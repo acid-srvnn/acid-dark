@@ -1,5 +1,5 @@
 export enum AgeGroup {
-    young,
-    adult,
-    old
+    young = "Young",
+    adult = "Adult",
+    old = "Old"
 }
