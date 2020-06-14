@@ -36,7 +36,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.peterDoppler, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:01").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 2)
         });
 
         events.push({
@@ -45,7 +45,7 @@ export class Episode1 extends EventsProvider {
             persons: [{ person: DarkPersons.inesKahnwald, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:02").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 3)
         });
 
         events.push({
@@ -58,7 +58,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:03").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 4)
         });
 
         events.push({
@@ -69,7 +69,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.marthaNielsen, personTime: AgeGroup.young },
             { person: DarkPersons.katarinaNielsen, personTime: AgeGroup.adult }],
             worldTimeInMillis: new Date("11/04/2019 07:00:04").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 5)
         });
 
         events.push({
@@ -78,7 +78,7 @@ export class Episode1 extends EventsProvider {
             persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
             { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
             worldTimeInMillis: new Date("11/04/2019 07:00:05").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 6)
         });
 
         events.push({
@@ -97,10 +97,22 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.adult },
             { person: DarkPersons.reginaTiedemann, personTime: AgeGroup.adult }
             ],
-            timeTravels: [{ timeTravel: TimeTravels.tt111, type: TimeTravelType.out }],
+            timeTravels: [{ timeTravel: TimeTravels.tt111, type: TimeTravelType.in },
+            { timeTravel: TimeTravels.tt112, type: TimeTravelType.out }],
             worldTimeInMillis: new Date("11/04/2019 22:00:00").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: (1 * 1000000 + 1 * 1000 + 7)
         });
+
+        events.push({
+            title: 'Mikkel Investigation',
+            description: 'Police finds a child body thats not mikkel.',
+            persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
+            { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
+            worldTimeInMillis: new Date("11/05/2019 07:00:00").getTime(),
+            episodeTime: (1 * 1000000 + 1 * 1000 + 8)
+        });
+
+        //TODO ending event
 
         return events;
     }

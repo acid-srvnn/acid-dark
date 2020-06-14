@@ -173,3 +173,7 @@
 #output {
   float: right;
 }
+
+.modal-backdrop {
+  opacity: 0.5 !important;
+}

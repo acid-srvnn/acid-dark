@@ -1,7 +1,7 @@
 export enum DarkFamily {
-    Nielsen,
-    Kahnwald,
-    Tiedemann,
-    Doppler,
-    Unknown
+    Nielsen = "Nielsen",
+    Kahnwald = "Kahnwald",
+    Tiedemann = "Tiedemann",
+    Doppler = "Doppler",
+    Unknown = "Unknown"
 }

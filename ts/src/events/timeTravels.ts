@@ -6,6 +6,14 @@ import { AgeGroup } from "../models/constants/enum/ageGroup";
 
 export class TimeTravels {
     public static tt111: TimeTravel = {
+        from: TimeLine.t1986,
+        to: TimeLine.t2019,
+        device: TimeTravelDevice.cave,
+        location: '',
+        persons: [{ person: DarkPersons.madsNielsen, personTime: AgeGroup.young }]
+    }
+
+    public static tt112: TimeTravel = {
         from: TimeLine.t2019,
         to: TimeLine.t1986,
         device: TimeTravelDevice.cave,
