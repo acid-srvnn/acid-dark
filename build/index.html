@@ -26,8 +26,17 @@
 
 		$(document).ready(function () {
 			$('.youtube-embed')[0].remove();
-			loadUrl('https://dark.netflix.io/');
 		});
+
+		function checkClass() {
+			if (!$('.is-preload').length) {
+				loadUrl('https://dark.netflix.io/');
+			} else {
+				setTimeout(checkClass, 1000);
+			}
+		}
+
+		setTimeout(checkClass, 1000);
 
 	</script>
 

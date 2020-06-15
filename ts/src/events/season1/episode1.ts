@@ -108,7 +108,7 @@ export class Episode1 extends EventsProvider {
             description: 'Police finds a child body thats not mikkel.',
             persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
             { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
-            worldTimeInMillis: new Date("11/05/2019 07:00:00").getTime(),
+            worldTimeInMillis: new Date("11/05/2019 07:00:01").getTime(),
             episodeTime: (1 * 1000000 + 1 * 1000 + 8)
         });
 
