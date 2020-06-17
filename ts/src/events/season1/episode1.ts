@@ -9,13 +9,15 @@ export class Episode1 extends EventsProvider {
     public getEvents(): DarkEvent[] {
         let events: DarkEvent[] = [];
 
+        let episodeTime = (1 * 1000000 + 2 * 1000 + 0);
+
         events.push({
             title: 'Michael commits suicide',
             description: 'Michael commits suicide leaving behind a letter `Do not open before November 4, 10:13 PM`',
             persons: [{ person: DarkPersons.mikkelNielsen, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("06/21/2019 13:00:00").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -26,7 +28,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:00").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 1)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -36,7 +38,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.peterDoppler, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:01").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 2)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -45,7 +47,7 @@ export class Episode1 extends EventsProvider {
             persons: [{ person: DarkPersons.inesKahnwald, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:02").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 3)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -58,7 +60,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/04/2019 07:00:03").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 4)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -69,7 +71,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.marthaNielsen, personTime: AgeGroup.young },
             { person: DarkPersons.katarinaNielsen, personTime: AgeGroup.adult }],
             worldTimeInMillis: new Date("11/04/2019 07:00:04").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 5)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -78,7 +80,7 @@ export class Episode1 extends EventsProvider {
             persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
             { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
             worldTimeInMillis: new Date("11/04/2019 07:00:05").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 6)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -100,7 +102,7 @@ export class Episode1 extends EventsProvider {
             timeTravels: [{ timeTravel: TimeTravels.tt111, type: TimeTravelType.in },
             { timeTravel: TimeTravels.tt112, type: TimeTravelType.out }],
             worldTimeInMillis: new Date("11/04/2019 22:00:00").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 7)
+            episodeTime: ++episodeTime
         });
 
         events.push({
@@ -109,7 +111,7 @@ export class Episode1 extends EventsProvider {
             persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
             { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
             worldTimeInMillis: new Date("11/05/2019 07:00:01").getTime(),
-            episodeTime: (1 * 1000000 + 1 * 1000 + 8)
+            episodeTime: ++episodeTime
         });
 
         //TODO ending event
