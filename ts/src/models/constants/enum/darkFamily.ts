@@ -3,5 +3,9 @@ export enum DarkFamily {
     Kahnwald = "Kahnwald",
     Tiedemann = "Tiedemann",
     Doppler = "Doppler",
-    Unknown = "Unknown"
+    Unknown = "Unknown",
+    Obendorf = "Obendorf",
+    Friese = "Friese",
+    Kruger = "Kruger",
+    Woller = "Woller"
 }

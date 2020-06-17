@@ -12,20 +12,20 @@ export class DarkPersons {
     }
 
     //Persons from Unknown families   
-    
+
     static bernadette: DarkPerson = {
         name: "Bernadette",
         family: DarkFamily.Unknown,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
     static torbenWoller: DarkPerson = {
         name: "Torben Woller",
-        family: DarkFamily.Unknown,
+        family: DarkFamily.Woller,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -33,7 +33,7 @@ export class DarkPersons {
         name: "Silja",
         family: DarkFamily.Unknown,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -41,37 +41,37 @@ export class DarkPersons {
         name: "Clausen",
         family: DarkFamily.Unknown,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
     static sebastianKruger: DarkPerson = {
         name: "Sebastian Kruger",
-        family: DarkFamily.Unknown,
+        family: DarkFamily.Kruger,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
-    
+
     static hgTannhaus: DarkPerson = {
         name: "H.G. Tannhaus",
         family: DarkFamily.Unknown,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
-    
+
     static jurgenObendorf: DarkPerson = {
         name: "Jürgen Obendorf",
-        family: DarkFamily.Unknown,
+        family: DarkFamily.Obendorf,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
     static erikObendorf: DarkPerson = {
         name: "Erik Obendorf",
-        family: DarkFamily.Unknown,
+        family: DarkFamily.Obendorf,
         photos: [],
         father: DarkPersons.jurgenObendorf,
         mother: undefined
@@ -79,9 +79,9 @@ export class DarkPersons {
 
     static yasinFriese: DarkPerson = {
         name: "Yasin Friese",
-        family: DarkFamily.Unknown,
+        family: DarkFamily.Friese,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -168,14 +168,14 @@ export class DarkPersons {
         mother: DarkPersons.katarinaNielsen,
         altName: ["Michael Khanwald"]
     }
-    
+
     //Persons from Kahnwald Family
 
     static danielKahnwald: DarkPerson = {
         name: "Daniel Kahnwald",
         family: DarkFamily.Kahnwald,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -183,7 +183,7 @@ export class DarkPersons {
         name: "Ines Kahnwald",
         family: DarkFamily.Kahnwald,
         photos: [],
-        father: DarkPersons.danielKahnwald, 
+        father: DarkPersons.danielKahnwald,
         mother: undefined
     }
 
@@ -191,7 +191,7 @@ export class DarkPersons {
         name: "Michael Kahnwald",
         family: DarkFamily.Kahnwald,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: DarkPersons.inesKahnwald
     }
 
@@ -212,21 +212,21 @@ export class DarkPersons {
     }
 
     //Persons from Doppler Family    
-    
+
     static berndDoppler: DarkPerson = {
         name: "Bernd Doppler",
         family: DarkFamily.Doppler,
         photos: [],
-        father: undefined, //TODO
-        mother: undefined //TODO
+        father: undefined,
+        mother: undefined
     }
 
     static gretaDoppler: DarkPerson = {
         name: "Greta Doppler",
         family: DarkFamily.Doppler,
         photos: [],
-        father: undefined, //TODO
-        mother: undefined //TODO
+        father: undefined,
+        mother: undefined
     }
 
     static helgeDoppler: DarkPerson = {
@@ -275,7 +275,7 @@ export class DarkPersons {
         name: "Egon Tiedemann",
         family: DarkFamily.Tiedemann,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -283,7 +283,7 @@ export class DarkPersons {
         name: "Doris Tiedemann",
         family: DarkFamily.Tiedemann,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -299,7 +299,7 @@ export class DarkPersons {
         name: "Regina Tiedemann",
         family: DarkFamily.Tiedemann,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: DarkPersons.claudiaTiedemann
     }
 
@@ -307,7 +307,7 @@ export class DarkPersons {
         name: "Aleksander Tiedemann",
         family: DarkFamily.Tiedemann,
         photos: [],
-        father: undefined, //TODO
+        father: undefined,
         mother: undefined
     }
 
@@ -319,5 +319,5 @@ export class DarkPersons {
         mother: DarkPersons.reginaTiedemann
     }
 
-    
+
 }
