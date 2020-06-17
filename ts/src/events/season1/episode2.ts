@@ -34,7 +34,8 @@ export class Episode2 extends EventsProvider {
         events.push({
             title: 'Ulrich finds cave metal door',
             description: 'Ulrich finds cave metal door. Comes back to tell Charlotte and get search warrant. Fails to get warrant. Meets Aleksander in the gates and argues.',
-            persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult }], //TODO aleksander
+            persons: [{ person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult },
+            { person: DarkPersons.aleksanderTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
             episodeTime: ++episodeTime
@@ -43,7 +44,8 @@ export class Episode2 extends EventsProvider {
         events.push({
             title: 'Aleksander orders Jurgen to move the cylinders',
             description: 'Aleksander orders Jurgen to move the cylinders',
-            persons: [], //TODO aleksander and jurgen
+            persons: [{ person: DarkPersons.aleksanderTiedemann, personTime: AgeGroup.adult },
+            { person: DarkPersons.jurgenObendorf, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
             episodeTime: ++episodeTime
@@ -69,48 +71,29 @@ export class Episode2 extends EventsProvider {
         });
 
         events.push({
-            title: 'Jonas finds a map',
-            description: 'Jonas finds a map of winden caves hidden in his dads room',
-            persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }],
-            timeTravels: [],
-            worldTimeInMillis: new Date("11/05/2019 09:00:00").getTime(),
-            episodeTime: ++episodeTime
-        });
-
-        events.push({
-            title: 'Jonas finds a map',
-            description: 'Jonas finds a map of winden caves hidden in his dads room',
-            persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }],
-            timeTravels: [],
-            worldTimeInMillis: new Date("11/05/2019 09:00:00").getTime(),
-            episodeTime: ++episodeTime
-        });
-
-        //TODO
-        events.push({
             title: 'Ulrich investigates Jurgen',
             description: 'Ulrich analyses Mikkel clues. Jurgen has van and was working in the nuclear power plant as a drive the night Erik went missing. Ulrich investigates Jurgen. Find his stash and that he didnt work the previous day.',
-            persons: [],
+            persons: [{ person: DarkPersons.jurgenObendorf, personTime: AgeGroup.adult },
+            { person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
             episodeTime: ++episodeTime
         });
 
-        //TODO
         events.push({
             title: 'Helge kills Erik',
-            description: 'Helge straps Erik to the bunker timemachine and kills him. Then drags him in the forest.',
-            persons: [],
+            description: 'Helge straps Erik to the bunker timemachine and kills him.',
+            persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
+            { person: DarkPersons.erikObendorf, personTime: AgeGroup.young }],
             timeTravels: [],
-            worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
+            worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(), //TODO
             episodeTime: ++episodeTime
         });
 
-        //TODO
         events.push({
             title: 'Aleksander loads barrels into a truck',
-            description: '',
-            persons: [],
+            description: 'Aleksander loads barrels into a truck',
+            persons: [{ person: DarkPersons.aleksanderTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
             episodeTime: ++episodeTime
