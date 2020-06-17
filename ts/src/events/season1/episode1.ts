@@ -10,7 +10,7 @@ export class Episode1 extends EventsProvider {
         let events: DarkEvent[] = [];
 
         events.push({
-            title: 'Michael  suicide',
+            title: 'Michael commits suicide',
             description: 'Michael commits suicide leaving behind a letter `Do not open before November 4, 10:13 PM`',
             persons: [{ person: DarkPersons.mikkelNielsen, personTime: AgeGroup.adult }],
             timeTravels: [],
