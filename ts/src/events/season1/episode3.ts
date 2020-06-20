@@ -4,12 +4,13 @@ import { DarkPersons } from "../../models/constants/darkPersons";
 import { AgeGroup } from "../../models/constants/enum/ageGroup";
 import { TimeTravels } from "../timeTravels";
 import { TimeTravelType } from "../../models/constants/enum/timeTravelType";
+import { EpisodeTime } from "../../models/episodeTime";
 
 export class Episode3 extends EventsProvider {
     public getEvents(): DarkEvent[] {
         let events: DarkEvent[] = [];
 
-        let episodeTime = (1 * 1000000 + 3 * 1000 + 0);
+        let episodeFrame = 0;
 
         events.push({
             title: 'Mikkel meets Jana',
@@ -18,7 +19,7 @@ export class Episode3 extends EventsProvider {
             { person: DarkPersons.janaNielsen, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 07:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
@@ -29,7 +30,7 @@ export class Episode3 extends EventsProvider {
             { person: DarkPersons.egonTiedemann, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 07:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
@@ -40,7 +41,7 @@ export class Episode3 extends EventsProvider {
             { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
@@ -51,7 +52,7 @@ export class Episode3 extends EventsProvider {
             { person: DarkPersons.berndDoppler, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
@@ -60,41 +61,41 @@ export class Episode3 extends EventsProvider {
             persons: [{ person: DarkPersons.egonTiedemann, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
             title: 'Tronte affair with Claudia',
             description: 'Tronte affair with Claudia',
             persons: [{ person: DarkPersons.tronteNielsen, personTime: AgeGroup.adult },
-                { person: DarkPersons.claudiaTiedemann, personTime: AgeGroup.adult }],
+            { person: DarkPersons.claudiaTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 09:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
             title: 'Ines takes Mikkel',
             description: 'Ines takes Mikkel for medical aid. Mikkel wouldnt talk with anyone.',
             persons: [{ person: DarkPersons.inesKahnwald, personTime: AgeGroup.adult },
-                { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young }],
+            { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 09:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });
 
         events.push({
             title: 'TimeTravel happens',
             description: 'Blinking lights. Dead birds. Ulrich and Hannah talk about Apocalypse. Mikkel runs from hospital to the cave.',
             persons: [{ person: DarkPersons.egonTiedemann, personTime: AgeGroup.old },
-                { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.young },
-                { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young },
-                { person: DarkPersons.ulrichNielsen, personTime: AgeGroup.young },
-                { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.young }],
+            { person: DarkPersons.charlotteDoppler, personTime: AgeGroup.young },
+            { person: DarkPersons.mikkelNielsen, personTime: AgeGroup.young },
+            { person: DarkPersons.ulrichNielsen, personTime: AgeGroup.young },
+            { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.young }],
             timeTravels: [], //TODO
             worldTimeInMillis: new Date("11/05/1986 20:00:00").getTime(),
-            episodeTime: ++episodeTime
-        });
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
+        });  //TODO Update timetravel info 
 
         return events;
     }

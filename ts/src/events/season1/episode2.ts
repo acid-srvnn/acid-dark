@@ -4,12 +4,13 @@ import { DarkPersons } from "../../models/constants/darkPersons";
 import { AgeGroup } from "../../models/constants/enum/ageGroup";
 import { TimeTravels } from "../timeTravels";
 import { TimeTravelType } from "../../models/constants/enum/timeTravelType";
+import { EpisodeTime } from "../../models/episodeTime";
 
 export class Episode2 extends EventsProvider {
     public getEvents(): DarkEvent[] {
         let events: DarkEvent[] = [];
 
-        let episodeTime = (1 * 1000000 + 2 * 1000 + 0);
+        let episodeFrame = 0;
 
         events.push({
             title: 'Jonas',
@@ -19,7 +20,7 @@ export class Episode2 extends EventsProvider {
             ],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 07:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -28,7 +29,7 @@ export class Episode2 extends EventsProvider {
             persons: [{ person: DarkPersons.charlotteDoppler, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -38,7 +39,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.aleksanderTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -48,7 +49,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.jurgenObendorf, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -58,7 +59,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.reginaTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 08:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -67,7 +68,7 @@ export class Episode2 extends EventsProvider {
             persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 09:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -77,7 +78,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.ulrichNielsen, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -87,7 +88,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.erikObendorf, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(), //TODO
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -96,7 +97,7 @@ export class Episode2 extends EventsProvider {
             persons: [{ person: DarkPersons.aleksanderTiedemann, personTime: AgeGroup.adult }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         events.push({
@@ -105,8 +106,8 @@ export class Episode2 extends EventsProvider {
             persons: [],
             timeTravels: [], //TODO
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
-            episodeTime: ++episodeTime
-        });
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
+        });  //TODO Update timetravel info 
 
         events.push({
             title: 'Mikkel in past',
@@ -116,7 +117,7 @@ export class Episode2 extends EventsProvider {
             { person: DarkPersons.katarinaNielsen, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/05/1986 07:00:00").getTime(),
-            episodeTime: ++episodeTime
+            episodeTime: new EpisodeTime(1, 2, ++episodeFrame)
         });
 
         return events;

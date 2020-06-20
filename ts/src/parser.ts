@@ -79,7 +79,7 @@ export class Parser {
             "       <div class='box-title'>" +
             "           <i class='fa fa-asterisk text-success' aria - hidden='true' > </i>" +
             "           %%TITLE%%" +
-            "           <a class='btn btn-xs btn-default pull-right' onclick='showEventDetails(" + event.episodeTime + ")'> Details </a>" +
+            "           <a class='btn btn-xs btn-default pull-right' onclick='showEventDetails(" + event.episodeTime.number + ")'> Details </a>" +
             "       </div>" +
             "       <div class='box-content' style='height:100px'>" +
             "           <div class='box-item'> %%DESCRIPTION%% </div>" +

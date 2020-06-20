@@ -27,7 +27,7 @@ declare global {
 
 window.showEventDetails = function (episodeTime: number) {
   let res = events.filter(event => {
-    return event.episodeTime === episodeTime;
+    return event.episodeTime.number === episodeTime;
   });
 
   $('#dark-event-modal').empty();
@@ -67,31 +67,31 @@ window.changeTime = function (order: string) {
 
       let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
       let monthAndYear = "my_" + worldTimeInMillis.getMonth() + worldTimeInMillis.getFullYear();
-    
+
       if (!$("#" + monthAndYear).length) {
         $('#dark-container .timeline').append(Parser.getMonthAndYearHtml(event))
       }
-    
+
       let date = "date_" + worldTimeInMillis.getDate() + "_" + monthAndYear;
-    
+
       if (!$("#" + date).length) {
         $('#dark-container .timeline').append(Parser.getDateHtml(event))
       }
-    
+
       $("#" + date).append(Parser.getEventHtml(event));
-    
+
     })
 
 
   } else if (order === 'mikkel') {
-    personTimeline(DarkPersons.mikkelNielsen);   
-  }else if (order === 'jonas') {
-    personTimeline(DarkPersons.jonasKahnwald);    
+    personTimeline(DarkPersons.mikkelNielsen);
+  } else if (order === 'jonas') {
+    personTimeline(DarkPersons.jonasKahnwald);
   }
 
 }
 
-function personTimeline(darkPerson : DarkPerson){
+function personTimeline(darkPerson: DarkPerson) {
   let filteredEvents = events.sort((a, b) => {
     return (a.worldTimeInMillis >= b.worldTimeInMillis) ? 1 : -1
   });
@@ -120,7 +120,7 @@ function personTimeline(darkPerson : DarkPerson){
 
   //sort each
   //TODO
- 
+
   filteredEvents = [];
   filteredEvents = filteredEvents.concat(filteredEvents1);
   filteredEvents = filteredEvents.concat(filteredEvents2);
@@ -140,18 +140,18 @@ function personTimeline(darkPerson : DarkPerson){
     let date = "date_" + worldTimeInMillis.getDate() + "_" + monthAndYear;
     let suffix = iterator;
 
-    if(prevDate == date){
+    if (prevDate == date) {
       suffix = prevI;
-      date = date+''+suffix;
-    }else{
+      date = date + '' + suffix;
+    } else {
       prevDate = date;
       prevI = iterator;
 
       suffix = iterator;
-      date = date+''+suffix;
-      $('#dark-container .timeline').append(Parser.getDateHtml2(event,date))
+      date = date + '' + suffix;
+      $('#dark-container .timeline').append(Parser.getDateHtml2(event, date))
     }
-    
+
     $("#" + date).append(Parser.getEventHtml(event));
 
   })
