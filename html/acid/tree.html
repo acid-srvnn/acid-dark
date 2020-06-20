@@ -10,43 +10,37 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.js"></script>
 
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="app.css">
+
+    <style>
+        .card{
+            width: 160px;border: solid 1px;text-align: center;
+        }
+        .card-img{
+            border: solid 1px #4dbadc;padding: 1px;width: 50px;height: 50px;
+        }
+        .card-body{
+            padding-top:5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="mermaid">
-        graph TD;
-        A[hello]
-        B[an <b>important</b> link]
-        A-->B
-    </div>
+    <button onclick="loadTree();"> Season 1 - Without spoiler </button>
+    <button onclick="loadTree();"> Season 1 - With spoiler </button>
+    <button onclick="loadTree();"> Season 2 - With spoiler </button>
 
-    <div class="mermaid">
-        graph TD
-        A[a]
-        B[b]
-        C(c)
-        D[d <strong>important</strong><div id&#61;'hello'> test</div>]
-        E(e)
-        F(f)
-        G(g)
-        H(h)
-        A-->G
-        subgraph one
-        A-->C
-        B-->C
-        C-->D
-        end
-        subgraph two 
-        E-->F 
-        end
-        subgraph three
-        G
-        end
+    <div id='darkfamily'>
+
     </div>
 
     <script src="tree-bundle.js"></script>
@@ -59,6 +53,10 @@
                 htmlLabels: true
             }
         })
+
+        mermaidInitialze = function(){
+            mermaid.init();
+        }
     </script>
 
 </body>
