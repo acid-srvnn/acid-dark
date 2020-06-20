@@ -4,6 +4,7 @@ import { TimeTravel } from "./models/interfaces/timeTravel";
 import { TimeTravelInDarkEvent } from "./models/interfaces/timeTravelInDarkEvent";
 import { TimeTravelType } from "./models/constants/enum/timeTravelType";
 import { DarkPerson } from "./models/interfaces/darkPerson";
+import { AgeGroup } from "./models/constants/enum/ageGroup";
 
 export class Parser {
 
@@ -84,7 +85,7 @@ export class Parser {
         returnStr = returnStr.replace("%%TIMETRAVELS%%", timeTravels);
         let persons = '';
         event.persons.forEach(person => {
-            persons = persons + Parser.getPersonHtml(person.person);
+            persons = persons + Parser.getPersonHtml(person);
         });
         returnStr = returnStr.replace("%%PERSONS%%", persons);
         console.log("Sending html " + returnStr);
@@ -95,7 +96,7 @@ export class Parser {
             "<div class='%%CLASS%%' > %%PERSONS%% </div>";
         let persons = '';
         timeTravel.timeTravel.persons.forEach(person => {
-            persons = persons + Parser.getPersonHtml(person.person);
+            persons = persons + Parser.getPersonHtml(person);
         });
         returnStr = returnStr.replace("%%PERSONS%%", persons);
         if (timeTravel.type == TimeTravelType.in) {
@@ -106,19 +107,19 @@ export class Parser {
         return returnStr;
     }
 
-    static getPersonHtml(person: DarkPerson) {
-        return "<img src='" + Parser.getPersonImage(person) + "' style='padding: 1px;width: 30px;height: 30px;' title='" + person.name + "' onclick='showPersonDetails(" + JSON.stringify(person) + ")'> ";
+    static getPersonHtml(person: DarkPersonInDarkEvent) {
+        return "<img src='" + Parser.getPersonImage(person) + "' style='padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' onclick='showPersonDetails(" + JSON.stringify(person.person) + ")'> ";
     }
 
-    static getPersonImage(person: DarkPerson): string {
-        if (person.photos[1]) {
-            return person.photos[1].url;
-        } else if (person.photos[0]) {
-            return person.photos[0].url;
-        } else if (person.photos[2]) {
-            return person.photos[2].url;
+    static getPersonImage(person: DarkPersonInDarkEvent): string {
+        if (person.personTime == AgeGroup.young) {
+            return person.person.photos.young!;
+        } else if (person.personTime == AgeGroup.adult) {
+            return person.person.photos.adult!;
+        } else if (person.personTime == AgeGroup.old) {
+            return person.person.photos.old!;
         } else {
-            return 'assets/unknownperson.jpg';
+            return 'assets/persons/unknownPerson0.jpg';
         }
     }
 

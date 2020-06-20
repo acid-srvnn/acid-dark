@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dark</title>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body>
+
+    <div class="mermaid">
+        graph TD;
+        A[hello]
+        B[an <b>important</b> link]
+        A-->B
+    </div>
+
+    <div class="mermaid">
+        graph TD
+        A[a]
+        B[b]
+        C(c)
+        D[d <strong>important</strong><div id&#61;'hello'> test</div>]
+        A-->C
+        B-->C
+        C-->D
+    </div>
+
+    <script src="tree-bundle.js"></script>
+
+    <script>
+        mermaid.initialize({
+            theme: 'forest',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        })
+    </script>
+
+</body>
+
+</html>

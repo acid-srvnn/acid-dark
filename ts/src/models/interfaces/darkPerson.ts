@@ -4,7 +4,7 @@ import { DarkPersonPhoto } from "./darkPersonPhoto";
 export interface DarkPerson {
     name: string,
     family: DarkFamily,
-    photos: DarkPersonPhoto[],
+    photos: DarkPersonPhoto,
     father: DarkPerson | undefined,
     mother: DarkPerson | undefined,
     altName?: string[]
