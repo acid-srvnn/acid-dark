@@ -108,7 +108,7 @@ export class Parser {
     }
 
     static getPersonHtml(person: DarkPersonInDarkEvent) {
-        return "<img src='" + Parser.getPersonImage(person) + "' style='padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' onclick='showPersonDetails(" + JSON.stringify(person.person) + ")'> ";
+        return "<img src='" + Parser.getPersonImage(person) + "' style='border: solid 1px #4dbadc;padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' onclick='showPersonDetails(" + JSON.stringify(person.person) + ")'> ";
     }
 
     static getPersonImage(person: DarkPersonInDarkEvent): string {
