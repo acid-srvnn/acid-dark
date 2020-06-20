@@ -41,6 +41,24 @@ export class Parser {
         console.log("Sending html " + returnStr);
         return returnStr;
     }
+    static getDateHtml2(event: DarkEvent, datevar: string): string | Element | JQuery<HTMLElement> | DocumentFragment | (Element | DocumentFragment)[] {
+        let returnStr = "" +
+            "<div class='timeline-section'>" +
+            "   <div class='timeline-date'>" +
+            "   %%DATESTR%%" +
+            "   </div>" +
+            "   <div id='%%DATE%%' class='row'>" +
+            "   </div>" +
+            "</div>";
+        let worldTimeInMillis: Date = new Date(event.worldTimeInMillis);
+        let monthAndYear = "my_" + worldTimeInMillis.getMonth() + worldTimeInMillis.getFullYear();
+        let date = "date_" + worldTimeInMillis.getDate() + "_" + monthAndYear;
+        let dateStr = Parser.monthNames[worldTimeInMillis.getMonth()] + " " + worldTimeInMillis.getDate().toString() + ", " + worldTimeInMillis.getFullYear();
+        returnStr = returnStr.replace("%%DATESTR%%", dateStr);
+        returnStr = returnStr.replace("%%DATE%%", datevar);
+        console.log("Sending html " + returnStr);
+        return returnStr;
+    }
     static getMonthAndYearHtml(event: DarkEvent): string {
         let returnStr = "" +
             "<div id='%%ID%%' class='timeline-month'>" +
