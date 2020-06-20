@@ -107,7 +107,7 @@ export class Episode4 extends EventsProvider {
             persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
             { person: DarkPersons.yasinFriese, personTime: AgeGroup.young }],
             timeTravels: [],
-            worldTimeInMillis: new Date("11/06/2019 19:00:00").getTime(),
+            worldTimeInMillis: new Date("11/07/2019 07:00:00").getTime(),
             episodeTime: new EpisodeTime(1, 4, ++episodeFrame)
         });
 

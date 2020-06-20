@@ -97,6 +97,15 @@ export class Episode3 extends EventsProvider {
             episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
         });  //TODO Update timetravel info 
 
+        events.push({
+            title: 'H.G.Tannhaus is working on time machine',
+            description: 'H.G.Tannhaus is working on time machine',
+            persons: [{ person: DarkPersons.hgTannhaus, personTime: AgeGroup.old },],
+            timeTravels: [],
+            worldTimeInMillis: new Date("11/05/1986 20:00:00").getTime(),
+            episodeTime: new EpisodeTime(1, 3, ++episodeFrame)
+        });
+
         return events;
     }
 }
