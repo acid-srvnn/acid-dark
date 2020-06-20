@@ -99,16 +99,14 @@ export class Episode2 extends EventsProvider {
             episodeTime: ++episodeTime
         });
 
-        /*
-        ?? Mikkel travelled to past Nov5 morn. Why lights blink in the eve.
         events.push({
             title: 'TimeTravel happens',
             description: 'Blinking lights. Dead birds.',
             persons: [],
-            timeTravels: [],
+            timeTravels: [], //TODO
             worldTimeInMillis: new Date("11/05/2019 20:00:00").getTime(),
             episodeTime: ++episodeTime
-        });*/
+        });
 
         events.push({
             title: 'Mikkel in past',
