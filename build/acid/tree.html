@@ -31,9 +31,22 @@
         B[b]
         C(c)
         D[d <strong>important</strong><div id&#61;'hello'> test</div>]
+        E(e)
+        F(f)
+        G(g)
+        H(h)
+        A-->G
+        subgraph one
         A-->C
         B-->C
         C-->D
+        end
+        subgraph two 
+        E-->F 
+        end
+        subgraph three
+        G
+        end
     </div>
 
     <script src="tree-bundle.js"></script>
