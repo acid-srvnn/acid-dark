@@ -28,4 +28,12 @@ export class TimeTravels {
         location: '',
         persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.adult }]
     }
+
+    public static tt161: TimeTravel = {
+        from: TimeLine.t2019,
+        to: TimeLine.t1986,
+        device: TimeTravelDevice.cave,
+        location: '',
+        persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }]
+    }
 }

@@ -11,6 +11,7 @@ import { DarkPersonInDarkEvent } from './models/interfaces/darkPersonIndarkEvent
 import { Episode3 } from './events/season1/episode3';
 import { Episode4 } from './events/season1/episode4';
 import { Episode5 } from './events/season1/episode5';
+import { Episode6 } from './events/season1/episode6';
 
 let events: DarkEvent[] = [];
 events = events.concat((new Episode1).getEvents());
@@ -18,6 +19,7 @@ events = events.concat((new Episode2).getEvents());
 events = events.concat((new Episode3).getEvents());
 events = events.concat((new Episode4).getEvents());
 events = events.concat((new Episode5).getEvents());
+events = events.concat((new Episode6).getEvents());
 
 declare global {
   interface Window {
