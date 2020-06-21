@@ -35,7 +35,7 @@ export class DarkPersons {
         name: "Torben Woller",
         family: DarkFamily.Woller,
         photos: new DarkPersonPhoto("torbenwoller", [AgeGroup.adult]),
-        father: undefined,
+        father: DarkPersons.bernadette,
         mother: undefined
     }
 

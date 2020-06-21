@@ -9,6 +9,7 @@ import { Episode7 } from "../events/season1/episode7";
 import { Episode8 } from "../events/season1/episode8";
 import { Episode9 } from "../events/season1/episode9";
 import { Episode10 } from "../events/season1/episode10";
+import { S0201 } from "../events/season2/s0201";
 
 export class Events {
     static events: DarkEvent[] = [];
@@ -24,6 +25,8 @@ export class Events {
         Events.events = Events.events.concat((new Episode8).getEvents());
         Events.events = Events.events.concat((new Episode9).getEvents());
         Events.events = Events.events.concat((new Episode10).getEvents());
+
+        Events.events = Events.events.concat((new S0201).getEvents());
     }
 
     public static getEvents() {
