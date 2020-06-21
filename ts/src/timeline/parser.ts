@@ -1,10 +1,10 @@
-import { DarkEvent } from "./models/interfaces/darkEvent";
-import { DarkPersonInDarkEvent } from "./models/interfaces/darkPersonIndarkEvent";
-import { TimeTravel } from "./models/interfaces/timeTravel";
-import { TimeTravelInDarkEvent } from "./models/interfaces/timeTravelInDarkEvent";
-import { TimeTravelType } from "./models/constants/enum/timeTravelType";
-import { DarkPerson } from "./models/interfaces/darkPerson";
-import { AgeGroup } from "./models/constants/enum/ageGroup";
+import { DarkEvent } from "../models/interfaces/darkEvent";
+import { DarkPersonInDarkEvent } from "../models/interfaces/darkPersonIndarkEvent";
+import { TimeTravel } from "../models/interfaces/timeTravel";
+import { TimeTravelInDarkEvent } from "../models/interfaces/timeTravelInDarkEvent";
+import { TimeTravelType } from "../models/constants/enum/timeTravelType";
+import { DarkPerson } from "../models/interfaces/darkPerson";
+import { AgeGroup } from "../models/constants/enum/ageGroup";
 
 export class Parser {
 

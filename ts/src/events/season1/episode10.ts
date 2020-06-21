@@ -1,4 +1,4 @@
-import { EventsProvider } from "../events";
+import { EventsProvider } from "../eventsProvider";
 import { DarkEvent } from "../../models/interfaces/darkEvent";
 import { DarkPersons } from "../../models/constants/darkPersons";
 import { AgeGroup } from "../../models/constants/enum/ageGroup";
