@@ -125,6 +125,7 @@
 .box-title {
   padding: 5px 15px;
   border-bottom: 1px solid #17191B;
+  height: 32px;
 }
 
 .box-title i {
@@ -176,4 +177,12 @@
 
 .modal-backdrop {
   opacity: 0.5 !important;
+}
+
+.div-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+  float: left;
 }

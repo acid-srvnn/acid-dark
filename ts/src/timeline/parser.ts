@@ -77,9 +77,8 @@ export class Parser {
             "<div class='col-sm-4'>" +
             "   <div class='timeline-box'>" +
             "       <div class='box-title'>" +
-            "           <i class='fa fa-asterisk text-success' aria - hidden='true' > </i>" +
-            "           %%TITLE%%" +
-            "           <a class='btn btn-xs btn-default pull-right' onclick='showEventDetails(" + event.episodeTime.number + ")'> Details </a>" +
+            "           <div class='div-ellipsis'> %%TITLE%% </div>" +
+            "           <div> <a class='btn btn-xs btn-default pull-right' onclick='showEventDetails(" + event.episodeTime.number + ")'> Details </a> </div>" +
             "       </div>" +
             "       <div class='box-content' style='height:100px'>" +
             "           <div class='box-item'> %%DESCRIPTION%% </div>" +
@@ -126,7 +125,11 @@ export class Parser {
     }
 
     static getPersonHtml(person: DarkPersonInDarkEvent) {
-        return "<img src='" + Parser.getPersonImage(person) + "' style='border: solid 1px #4dbadc;padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' onclick='showPersonDetails(" + JSON.stringify(person.person) + ")'> ";
+        return "<img src='" + Parser.getPersonImage(person) + "' style='cursor:pointer;border: solid 1px #4dbadc;padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' onclick='showPersonDetails(" + JSON.stringify(person.person) + ")'> ";
+    }
+
+    static getPersonHtml2(person: DarkPersonInDarkEvent) {
+        return "<img src='" + Parser.getPersonImage(person) + "' style='border: solid 1px #4dbadc;padding: 1px;width: 50px;height: 50px;' title='" + person.person.name + "' > ";
     }
 
     static getPersonImage(person: DarkPersonInDarkEvent): string {
@@ -169,13 +172,21 @@ export class Parser {
             '    <div class="modal-header">' +
             '      <h5 class="modal-title">%%TITLE%%</h5>' +
             '    </div>' +
-            '    <div class="modal-body">' +
+            '    <div class="modal-header">' +
+            '      %%IMG0%%' +
+            '      %%IMG1%%' +
+            '      %%IMG2%%' +
+            '    </div>' +
+            '    <div class="modal-header">' +
             '      <p>%%BODY%%</p>' +
             '    </div>' +
             '  </div>' +
             '</div>' +
             '</div>';
         returnStr = returnStr.replace("%%TITLE%%", person.name);
+        returnStr = returnStr.replace("%%IMG0%%", Parser.getPersonHtml2({ person: person, personTime: AgeGroup.young }));
+        returnStr = returnStr.replace("%%IMG1%%", Parser.getPersonHtml2({ person: person, personTime: AgeGroup.adult }));
+        returnStr = returnStr.replace("%%IMG2%%", Parser.getPersonHtml2({ person: person, personTime: AgeGroup.old }));
         returnStr = returnStr.replace("%%BODY%%", person.family + '<br>' + person.father?.name + '<br>' + person.mother?.name);
         console.log("Sending html " + returnStr);
         return returnStr;
