@@ -3,5 +3,6 @@ export enum TimeTravelDevice {
     cave,
     tannhausDevice,
     altMarthaDevice,
-    powerPlant
+    powerPlant,
+    bunkerDevice
 }

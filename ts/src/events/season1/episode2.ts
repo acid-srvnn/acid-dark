@@ -13,7 +13,7 @@ export class Episode2 extends EventsProvider {
         let episodeFrame = 0;
 
         events.push({
-            title: 'Jonas',
+            title: 'Jonas wakes up',
             description: 'Jonas wakes up from nightmares as usual. Stranger Jonas watches Mikkel search crew.',
             persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young },
             { person: DarkPersons.jonasKahnwald, personTime: AgeGroup.adult }

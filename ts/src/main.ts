@@ -12,6 +12,10 @@ import { Episode3 } from './events/season1/episode3';
 import { Episode4 } from './events/season1/episode4';
 import { Episode5 } from './events/season1/episode5';
 import { Episode6 } from './events/season1/episode6';
+import { Episode7 } from './events/season1/episode7';
+import { Episode8 } from './events/season1/episode8';
+import { Episode9 } from './events/season1/episode9';
+import { Episode10 } from './events/season1/episode10';
 
 let events: DarkEvent[] = [];
 events = events.concat((new Episode1).getEvents());
@@ -20,6 +24,10 @@ events = events.concat((new Episode3).getEvents());
 events = events.concat((new Episode4).getEvents());
 events = events.concat((new Episode5).getEvents());
 events = events.concat((new Episode6).getEvents());
+events = events.concat((new Episode7).getEvents());
+events = events.concat((new Episode8).getEvents());
+events = events.concat((new Episode9).getEvents());
+events = events.concat((new Episode10).getEvents());
 
 declare global {
   interface Window {

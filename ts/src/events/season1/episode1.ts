@@ -100,8 +100,7 @@ export class Episode1 extends EventsProvider {
             { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.adult },
             { person: DarkPersons.reginaTiedemann, personTime: AgeGroup.adult }
             ],
-            timeTravels: [{ timeTravel: TimeTravels.tt111, type: TimeTravelType.in },
-            { timeTravel: TimeTravels.tt112, type: TimeTravelType.out }],
+            timeTravels: [{ timeTravel: TimeTravels.tt112, type: TimeTravelType.out }],
             worldTimeInMillis: new Date("11/04/2019 22:00:00").getTime(),
             episodeTime: new EpisodeTime(1, 1, ++episodeFrame)
         }); //TODO Update timetravel info 
