@@ -100,13 +100,52 @@ export class Episode7 extends EventsProvider {
             episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
         });
 
-        events.push({
-            title: 'Helge with a dead body', //TODO
-            description: 'Helge is with a dead body outside the bunker. Noah cleans the place. Adds text to the wall - Nov 9 1953.',
+        /*events.push({
+            title: 'Helge with a dead body',
+            description: 'Helge is with a dead body outside the bunker. ',
             persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
             { person: DarkPersons.noah, personTime: AgeGroup.old }],
             timeTravels: [],
             worldTimeInMillis: new Date("11/09/1953 20:00:00").getTime(),
+            episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
+        });*/
+
+        //Assumed Events
+        events.push({
+            title: 'Bunker TimeMachine',
+            description: 'Helge uses time machine on Erik Obendroff. Erik Obendroff dies and goes to 1953.',
+            persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
+            { person: DarkPersons.erikObendorf, personTime: AgeGroup.young }],
+            timeTravels: [],
+            worldTimeInMillis: new Date("11/05/1986 13:00:00").getTime(),
+            episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
+        });
+        events.push({
+            title: 'Bunker TimeMachine',
+            description: 'Helge uses time machine on Yasin Friese. Yasin Friese dies and goes to 1953.',
+            persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
+            { person: DarkPersons.yasinFriese, personTime: AgeGroup.young }],
+            timeTravels: [],
+            worldTimeInMillis: new Date("11/09/1986 13:00:00").getTime(),
+            episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
+        });
+        events.push({
+            title: 'Bunker TimeMachine',
+            description: 'Helge uses time machine on Erik Obendroff in 1986. Erik Obendroff dies and reaches 1953.',
+            persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
+            { person: DarkPersons.erikObendorf, personTime: AgeGroup.young }],
+            timeTravels: [],
+            worldTimeInMillis: new Date("11/05/1953 13:00:00").getTime(),
+            episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
+        });
+        events.push({
+            title: 'Bunker TimeMachine',
+            description: 'Helge uses time machine on Yasin Friese in 1986. Yasin Friese dies and reaches 1953. Noah cleans the place. Adds text to the wall - Nov 9 1953.',
+            persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.adult },
+            { person: DarkPersons.yasinFriese, personTime: AgeGroup.young },
+            { person: DarkPersons.noah, personTime: AgeGroup.adult }],
+            timeTravels: [],
+            worldTimeInMillis: new Date("11/09/1953 13:00:00").getTime(),
             episodeTime: new EpisodeTime(1, 7, ++episodeFrame)
         });
 

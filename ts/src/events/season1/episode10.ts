@@ -160,7 +160,7 @@ export class Episode10 extends EventsProvider {
             description: 'Tannhaus is building the time machine based on the blueprint given by Claudia.',
             persons: [{ person: DarkPersons.hgTannhaus, personTime: AgeGroup.adult }],
             timeTravels: [],
-            worldTimeInMillis: new Date("11/12/1952 20:00:00").getTime(),
+            worldTimeInMillis: new Date("11/12/1953 20:00:00").getTime(),
             episodeTime: new EpisodeTime(1, 10, ++episodeFrame)
         });
 
