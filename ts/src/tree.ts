@@ -21,3 +21,5 @@ window.loadTree = function () {
 
   window.mermaidInitialze();
 }
+
+window.loadTree();

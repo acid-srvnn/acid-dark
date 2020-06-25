@@ -95,7 +95,108 @@ export class TreeRenderer {
         strToAppend += 'michaelKahnwaldXhannahKahnwald --> jonasKahnwald' + '\n';
 
         strToAppend += 'end' + '\n';
-        //subgraph Nielsen - end
+        //subgraph Khanwald - end
+
+
+        //subgraph Tiedemann - start
+        strToAppend += 'subgraph Tiedemann' + '\n';
+
+        //gen0
+        strToAppend += 'tiedemannHead[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+
+        //gen1
+        strToAppend += 'egonTiedemann[' + TreeParser.getTreePerson(DarkPersons.egonTiedemann) + ']' + '\n';
+        strToAppend += 'dorisTiedemann[' + TreeParser.getTreePerson(DarkPersons.dorisTiedemann) + ']' + '\n';
+        strToAppend += 'egonTiedemannXdorisTiedemann[ Married ]' + '\n';
+
+        //gen2
+        strToAppend += 'claudiaTiedemann[' + TreeParser.getTreePerson(DarkPersons.claudiaTiedemann) + ']' + '\n';
+        strToAppend += 'claudiaTiedemannHusband[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+        strToAppend += 'claudiaTiedemannXclaudiaTiedemannHusband[ Married ]' + '\n';
+
+        //gen3
+        strToAppend += 'reginaTiedemann[' + TreeParser.getTreePerson(DarkPersons.reginaTiedemann) + ']' + '\n';
+        strToAppend += 'aleksanderTiedemann[' + TreeParser.getTreePerson(DarkPersons.aleksanderTiedemann) + ']' + '\n';
+        strToAppend += 'reginaTiedemannXaleksanderTiedemann[ Married ]' + '\n';
+
+        //gen4
+        strToAppend += 'bartoszTiedemann[' + TreeParser.getTreePerson(DarkPersons.bartoszTiedemann) + ']' + '\n';
+
+        //connections
+        strToAppend += 'tiedemannHead --> egonTiedemann' + '\n';
+        strToAppend += 'egonTiedemann --> egonTiedemannXdorisTiedemann' + '\n';
+        strToAppend += 'dorisTiedemann --> egonTiedemannXdorisTiedemann' + '\n';
+        strToAppend += 'egonTiedemannXdorisTiedemann --> claudiaTiedemann' + '\n';
+        strToAppend += 'claudiaTiedemann --> claudiaTiedemannXclaudiaTiedemannHusband' + '\n';
+        strToAppend += 'claudiaTiedemannHusband --> claudiaTiedemannXclaudiaTiedemannHusband' + '\n';
+        strToAppend += 'claudiaTiedemannXclaudiaTiedemannHusband --> reginaTiedemann' + '\n';
+        strToAppend += 'reginaTiedemann --> reginaTiedemannXaleksanderTiedemann' + '\n';
+        strToAppend += 'aleksanderTiedemann --> reginaTiedemannXaleksanderTiedemann' + '\n';
+        strToAppend += 'reginaTiedemannXaleksanderTiedemann --> bartoszTiedemann' + '\n';
+
+        strToAppend += 'end' + '\n';
+        //subgraph Tiedemann - end
+
+        //subgraph Doppler - start
+        strToAppend += 'subgraph Doppler' + '\n';
+
+        //gen0
+        strToAppend += 'dopplerHead[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+        strToAppend += 'dopplerHead2[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+        strToAppend += 'dopplerHead3[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+
+        //gen1
+        strToAppend += 'berndDoppler[' + TreeParser.getTreePerson(DarkPersons.berndDoppler) + ']' + '\n';
+        strToAppend += 'gretaDoppler[' + TreeParser.getTreePerson(DarkPersons.gretaDoppler) + ']' + '\n';
+        strToAppend += 'gretaDopplerX[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+        strToAppend += 'berndDopplerXgretaDoppler[ Married ]' + '\n';
+        strToAppend += 'gretaDopplerXgretaDopplerX[ Affair ]' + '\n';
+        strToAppend += 'hgTannhaus[' + TreeParser.getTreePerson(DarkPersons.hgTannhaus) + ']' + '\n';
+        strToAppend += 'hgTannhausX[ Unknown ]' + '\n';
+
+        //gen2
+        strToAppend += 'helgeDoppler[' + TreeParser.getTreePerson(DarkPersons.helgeDoppler) + ']' + '\n';
+        strToAppend += 'helgeDopplerX[' + TreeParser.getTreePerson(DarkPersons.unknownPerson) + ']' + '\n';
+        strToAppend += 'helgeDopplerXhelgeDopplerX[ Married ]' + '\n';
+        strToAppend += 'elisabethDoppler2[' + TreeParser.getTreePerson(DarkPersons.elisabethDoppler) + ']' + '\n';
+        strToAppend += 'noah2[' + TreeParser.getTreePerson(DarkPersons.noah) + ']' + '\n';
+        strToAppend += 'elisabethDoppler2Xnoah2[ Unknown ]' + '\n';
+
+        //gen3
+        strToAppend += 'charlotteDoppler[' + TreeParser.getTreePerson(DarkPersons.charlotteDoppler) + ']' + '\n';
+        strToAppend += 'peterDoppler[' + TreeParser.getTreePerson(DarkPersons.peterDoppler) + ']' + '\n';
+        strToAppend += 'charlotteDopplerXpeterDoppler[ Married ]' + '\n';
+
+        //gen4
+        strToAppend += 'franziskaDoppler[' + TreeParser.getTreePerson(DarkPersons.franziskaDoppler) + ']' + '\n';
+        strToAppend += 'elisabethDoppler[' + TreeParser.getTreePerson(DarkPersons.elisabethDoppler) + ']' + '\n';
+
+        //connections
+        strToAppend += 'dopplerHead --> berndDoppler' + '\n';
+        strToAppend += 'dopplerHead2 --> gretaDoppler' + '\n';
+        strToAppend += 'dopplerHead3 --> hgTannhaus' + '\n';
+        strToAppend += 'berndDoppler --> berndDopplerXgretaDoppler' + '\n';
+        strToAppend += 'gretaDoppler --> berndDopplerXgretaDoppler' + '\n';
+        strToAppend += 'gretaDoppler --> gretaDopplerXgretaDopplerX' + '\n';
+        strToAppend += 'gretaDopplerX --> gretaDopplerXgretaDopplerX' + '\n';
+        strToAppend += 'gretaDopplerXgretaDopplerX --> helgeDoppler' + '\n';
+        strToAppend += 'hgTannhaus --> hgTannhausX' + '\n';
+        strToAppend += 'hgTannhausX --> elisabethDoppler2' + '\n';
+        strToAppend += 'helgeDoppler --> helgeDopplerXhelgeDopplerX' + '\n';
+        strToAppend += 'helgeDopplerX --> helgeDopplerXhelgeDopplerX' + '\n';
+        strToAppend += 'helgeDopplerXhelgeDopplerX --> peterDoppler' + '\n';
+        strToAppend += 'elisabethDoppler2 --> elisabethDoppler2Xnoah2' + '\n';
+        strToAppend += 'noah2 --> elisabethDoppler2Xnoah2' + '\n';
+        strToAppend += 'elisabethDoppler2Xnoah2 --> charlotteDoppler' + '\n';
+        strToAppend += 'charlotteDoppler --> charlotteDopplerXpeterDoppler' + '\n';
+        strToAppend += 'peterDoppler --> charlotteDopplerXpeterDoppler' + '\n';
+        strToAppend += 'charlotteDopplerXpeterDoppler --> franziskaDoppler' + '\n';
+        strToAppend += 'charlotteDopplerXpeterDoppler --> elisabethDoppler' + '\n';
+
+        strToAppend += 'end' + '\n';
+        //subgraph Doppler - end
+
+
 
         return strToAppend;
     }
