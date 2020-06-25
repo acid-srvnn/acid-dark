@@ -6,17 +6,30 @@ export class TreeParser {
         let returnStr = "" +
             "<div class&#61;'card'>" +
             "   <div>" +
-            "        <img src&#61;'%%IMAGE0%%' class&#61;'card-img'>" +
-            "        <img src&#61;'%%IMAGE1%%' class&#61;'card-img'>" +
-            "        <img src&#61;'%%IMAGE2%%' class&#61;'card-img'>" +
+            "        %%IMAGE0%%" +
+            "        %%IMAGE1%%" +
+            "        %%IMAGE2%%" +
             "    </div>" +
             "    <div class&#61;'card-body'>" +
             "        <p class&#61;'card-text'> %%NAME%% </p>" +
             "    </div>" +
             "</div>";
-        returnStr = returnStr.replace("%%IMAGE0%%", person.photos.young == undefined ? '' : person.photos.young.split('/').join('&#47;'));
-        returnStr = returnStr.replace("%%IMAGE1%%", person.photos.adult == undefined ? '' : person.photos.adult.split('/').join('&#47;'));
-        returnStr = returnStr.replace("%%IMAGE2%%", person.photos.old == undefined ? '' : person.photos.old.split('/').join('&#47;'));
+        let imgStr = "<img src&#61;'%%IMAGE%%' class&#61;'card-img'>";
+        if (person.photos.young) {
+            returnStr = returnStr.replace("%%IMAGE0%%", imgStr.replace("%%IMAGE%%", person.photos.young.split('/').join('&#47;')));
+        } else {
+            returnStr = returnStr.replace("%%IMAGE0%%", "");
+        }
+        if (person.photos.adult) {
+            returnStr = returnStr.replace("%%IMAGE1%%", imgStr.replace("%%IMAGE%%", person.photos.adult.split('/').join('&#47;')));
+        } else {
+            returnStr = returnStr.replace("%%IMAGE1%%", "");
+        }
+        if (person.photos.old) {
+            returnStr = returnStr.replace("%%IMAGE2%%", imgStr.replace("%%IMAGE%%", person.photos.old.split('/').join('&#47;')));
+        } else {
+            returnStr = returnStr.replace("%%IMAGE2%%", "");
+        }
         returnStr = returnStr.replace("%%NAME%%", person.name);
         console.log("Sending html " + returnStr);
         return returnStr;
