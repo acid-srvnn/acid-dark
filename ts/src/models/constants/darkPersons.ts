@@ -18,7 +18,7 @@ export class DarkPersons {
     static gretchen: DarkPerson = {
         name: "Gretchen",
         family: DarkFamily.Unknown,
-        photos: new DarkPersonPhoto("gretchen", undefined),
+        photos: new DarkPersonPhoto("gretchen", [AgeGroup.young]),
         father: undefined,
         mother: undefined
     }
@@ -58,7 +58,7 @@ export class DarkPersons {
     static sebastianKruger: DarkPerson = {
         name: "Sebastian Kruger",
         family: DarkFamily.Kruger,
-        photos: new DarkPersonPhoto("sebastiankruger", undefined),
+        photos: new DarkPersonPhoto("sebastiankruger", [AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -66,7 +66,7 @@ export class DarkPersons {
     static hgTannhaus: DarkPerson = {
         name: "H.G. Tannhaus",
         family: DarkFamily.Unknown,
-        photos: new DarkPersonPhoto("hgtannhaus", undefined),
+        photos: new DarkPersonPhoto("hgtannhaus", [AgeGroup.adult,AgeGroup.old]),
         father: undefined,
         mother: undefined
     }
@@ -82,7 +82,7 @@ export class DarkPersons {
     static erikObendorf: DarkPerson = {
         name: "Erik Obendorf",
         family: DarkFamily.Obendorf,
-        photos: new DarkPersonPhoto("erikobendorf", undefined),
+        photos: new DarkPersonPhoto("erikobendorf", [AgeGroup.young]),
         father: DarkPersons.jurgenObendorf,
         mother: undefined
     }
@@ -90,7 +90,7 @@ export class DarkPersons {
     static yasinFriese: DarkPerson = {
         name: "Yasin Friese",
         family: DarkFamily.Friese,
-        photos: new DarkPersonPhoto("yasinfriese", undefined),
+        photos: new DarkPersonPhoto("yasinfriese", [AgeGroup.young]),
         father: undefined,
         mother: undefined
     }
@@ -100,7 +100,7 @@ export class DarkPersons {
     static agnesNielsen: DarkPerson = {
         name: "Agnes Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("agnesnielsen", undefined),
+        photos: new DarkPersonPhoto("agnesnielsen", [AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -141,7 +141,7 @@ export class DarkPersons {
     static madsNielsen: DarkPerson = {
         name: "Mads Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("madsnielsen", undefined),
+        photos: new DarkPersonPhoto("madsnielsen", [AgeGroup.young]),
         father: DarkPersons.tronteNielsen,
         mother: DarkPersons.janaNielsen
     }
@@ -149,7 +149,7 @@ export class DarkPersons {
     static katarinaNielsen: DarkPerson = {
         name: "Katarina Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("katarinanielsen", undefined),
+        photos: new DarkPersonPhoto("katarinanielsen", [AgeGroup.adult,AgeGroup.old]),
         father: undefined,
         mother: undefined
     }
@@ -157,7 +157,7 @@ export class DarkPersons {
     static magnusNielsen: DarkPerson = {
         name: "Magnus Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("magnusnielsen", undefined),
+        photos: new DarkPersonPhoto("magnusnielsen", [AgeGroup.young,AgeGroup.old]),
         father: DarkPersons.ulrichNielsen,
         mother: DarkPersons.katarinaNielsen
     }
@@ -165,7 +165,7 @@ export class DarkPersons {
     static marthaNielsen: DarkPerson = {
         name: "Martha Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("marthanielsen", undefined),
+        photos: new DarkPersonPhoto("marthanielsen", [AgeGroup.young]),
         father: DarkPersons.ulrichNielsen,
         mother: DarkPersons.katarinaNielsen
     }
@@ -173,7 +173,7 @@ export class DarkPersons {
     static mikkelNielsen: DarkPerson = {
         name: "Mikkel Nielsen",
         family: DarkFamily.Nielsen,
-        photos: new DarkPersonPhoto("mikkelnielsen", undefined),
+        photos: new DarkPersonPhoto("mikkelnielsen", [AgeGroup.young,AgeGroup.adult]),
         father: DarkPersons.ulrichNielsen,
         mother: DarkPersons.katarinaNielsen,
         altName: ["Michael Khanwald"]
@@ -184,7 +184,7 @@ export class DarkPersons {
     static danielKahnwald: DarkPerson = {
         name: "Daniel Kahnwald",
         family: DarkFamily.Kahnwald,
-        photos: new DarkPersonPhoto("danielkahnwald", undefined),
+        photos: new DarkPersonPhoto("danielkahnwald",[AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -200,7 +200,7 @@ export class DarkPersons {
     static michaelKahnwald: DarkPerson = {
         name: "Michael Kahnwald",
         family: DarkFamily.Kahnwald,
-        photos: new DarkPersonPhoto("michaelkahnwald", undefined),
+        photos: new DarkPersonPhoto("michaelkahnwald", [AgeGroup.young,AgeGroup.adult]),
         father: undefined,
         mother: DarkPersons.inesKahnwald
     }
@@ -208,7 +208,7 @@ export class DarkPersons {
     static hannahKahnwald: DarkPerson = {
         name: "Hannah Kahnwald",
         family: DarkFamily.Kahnwald,
-        photos: new DarkPersonPhoto("hannahkahnwald", undefined),
+        photos: new DarkPersonPhoto("hannahkahnwald", [AgeGroup.young,AgeGroup.adult]),
         father: DarkPersons.sebastianKruger,
         mother: undefined
     }
@@ -226,7 +226,7 @@ export class DarkPersons {
     static berndDoppler: DarkPerson = {
         name: "Bernd Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("bernddoppler", undefined),
+        photos: new DarkPersonPhoto("bernddoppler", [AgeGroup.adult,AgeGroup.old]),
         father: undefined,
         mother: undefined
     }
@@ -234,7 +234,7 @@ export class DarkPersons {
     static gretaDoppler: DarkPerson = {
         name: "Greta Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("gretadoppler", undefined),
+        photos: new DarkPersonPhoto("gretadoppler", [AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -250,7 +250,7 @@ export class DarkPersons {
     static peterDoppler: DarkPerson = {
         name: "Peter Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("peterdoppler", undefined),
+        photos: new DarkPersonPhoto("peterdoppler", [AgeGroup.adult]),
         father: DarkPersons.helgeDoppler,
         mother: undefined
     }
@@ -258,7 +258,7 @@ export class DarkPersons {
     static charlotteDoppler: DarkPerson = {
         name: "Charlotte Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("charlottedoppler", undefined),
+        photos: new DarkPersonPhoto("charlottedoppler", [AgeGroup.young,AgeGroup.adult]),
         father: DarkPersons.noah,
         mother: undefined
     }
@@ -266,7 +266,7 @@ export class DarkPersons {
     static franziskaDoppler: DarkPerson = {
         name: "Franziska Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("franziskadoppler", undefined),
+        photos: new DarkPersonPhoto("franziskadoppler", [AgeGroup.young,AgeGroup.old]),
         father: DarkPersons.peterDoppler,
         mother: DarkPersons.charlotteDoppler
     }
@@ -274,7 +274,7 @@ export class DarkPersons {
     static elisabethDoppler: DarkPerson = {
         name: "Elisabeth Doppler",
         family: DarkFamily.Doppler,
-        photos: new DarkPersonPhoto("elisabethdoppler", undefined),
+        photos: new DarkPersonPhoto("elisabethdoppler", [AgeGroup.young,AgeGroup.adult]),
         father: DarkPersons.peterDoppler,
         mother: DarkPersons.charlotteDoppler
     }
@@ -284,7 +284,7 @@ export class DarkPersons {
     static egonTiedemann: DarkPerson = {
         name: "Egon Tiedemann",
         family: DarkFamily.Tiedemann,
-        photos: new DarkPersonPhoto("egontiedemann", undefined),
+        photos: new DarkPersonPhoto("egontiedemann", [AgeGroup.adult,AgeGroup.old]),
         father: undefined,
         mother: undefined
     }
@@ -292,7 +292,7 @@ export class DarkPersons {
     static dorisTiedemann: DarkPerson = {
         name: "Doris Tiedemann",
         family: DarkFamily.Tiedemann,
-        photos: new DarkPersonPhoto("doristiedemann", undefined),
+        photos: new DarkPersonPhoto("doristiedemann", [AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -308,7 +308,7 @@ export class DarkPersons {
     static reginaTiedemann: DarkPerson = {
         name: "Regina Tiedemann",
         family: DarkFamily.Tiedemann,
-        photos: new DarkPersonPhoto("reginatiedemann", undefined),
+        photos: new DarkPersonPhoto("reginatiedemann", [AgeGroup.young,AgeGroup.adult]),
         father: undefined,
         mother: DarkPersons.claudiaTiedemann
     }
@@ -316,7 +316,7 @@ export class DarkPersons {
     static aleksanderTiedemann: DarkPerson = {
         name: "Aleksander Tiedemann",
         family: DarkFamily.Tiedemann,
-        photos: new DarkPersonPhoto("aleksandertiedemann", undefined),
+        photos: new DarkPersonPhoto("aleksandertiedemann", [AgeGroup.young,AgeGroup.adult]),
         father: undefined,
         mother: undefined
     }
@@ -324,7 +324,7 @@ export class DarkPersons {
     static bartoszTiedemann: DarkPerson = {
         name: "Bartosz Tiedemann",
         family: DarkFamily.Tiedemann,
-        photos: new DarkPersonPhoto("bartosztiedemann", undefined),
+        photos: new DarkPersonPhoto("bartosztiedemann",[AgeGroup.young]),
         father: DarkPersons.aleksanderTiedemann,
         mother: DarkPersons.reginaTiedemann
     }
