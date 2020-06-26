@@ -27,6 +27,7 @@ export class Events {
         Events.events = Events.events.concat((new Episode10).getEvents());
 
         Events.events = Events.events.concat((new S0201).getEvents());
+        Events.events = Events.events.concat((new S0202).getEvents());
     }
 
     public static getEvents() {

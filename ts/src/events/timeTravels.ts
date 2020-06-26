@@ -84,4 +84,43 @@ export class TimeTravels {
         location: '',
         persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }]
     }
+
+    public static tt221: TimeTravel = {
+        from: TimeLine.t1953,
+        to: TimeLine.t1986,
+        device: TimeTravelDevice.unknown,
+        location: '',
+        persons: [{ person: DarkPersons.claudiaTiedemann, personTime: AgeGroup.old },
+        { person: DarkPersons.gretchen, personTime: AgeGroup.young }
+        ]
+    }
+
+    public static tt222: TimeTravel = {
+        from: TimeLine.t2019,
+        to: TimeLine.t1986,
+        device: TimeTravelDevice.tannhausDevice,
+        location: '',
+        persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.adult },
+        { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.adult }
+        ]
+    }
+
+    public static tt223: TimeTravel = {
+        from: TimeLine.t1986,
+        to: TimeLine.unknown,
+        device: TimeTravelDevice.tannhausDevice,
+        location: '',
+        persons: [{ person: DarkPersons.claudiaTiedemann, personTime: AgeGroup.old }
+        ]
+    }
+
+    public static tt224: TimeTravel = {
+        from: TimeLine.t1986,
+        to: TimeLine.t2019,
+        device: TimeTravelDevice.tannhausDevice,
+        location: '',
+        persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.adult },
+        { person: DarkPersons.hannahKahnwald, personTime: AgeGroup.adult }
+        ]
+    }
 }

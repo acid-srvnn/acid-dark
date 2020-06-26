@@ -93,7 +93,7 @@ export class Episode8 extends EventsProvider {
             { person: DarkPersons.tronteNielsen, personTime: AgeGroup.young },
             { person: DarkPersons.helgeDoppler, personTime: AgeGroup.young },
             { person: DarkPersons.gretchen, personTime: AgeGroup.young }],
-            timeTravels: [],
+            timeTravels: [{ timeTravel: TimeTravels.tt221, type: TimeTravelType.out }],
             worldTimeInMillis: new Date("11/10/1953 10:00:00").getTime(), //TODO
             episodeTime: new EpisodeTime(1, 8, ++episodeFrame)
         });

@@ -88,7 +88,7 @@ export class S0201 extends EventsProvider {
 
         events.push({
             title: 'Jonas finds time portal inside power plant',
-            description: 'Jonas secretly enters the power plant and using the geiger counter finds the time portal.',
+            description: 'Jonas secretly enters the power plant and using the geiger counter finds the God particle in unstabilized state.',
             persons: [{ person: DarkPersons.jonasKahnwald, personTime: AgeGroup.young }],
             timeTravels: [],
             worldTimeInMillis: new Date("06/21/2053 20:00:00").getTime(),

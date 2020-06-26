@@ -4,5 +4,6 @@ export enum TimeTravelDevice {
     tannhausDevice,
     altMarthaDevice,
     powerPlant,
-    bunkerDevice
+    bunkerDevice,
+    unknown
 }
