@@ -6,7 +6,7 @@ import { EpisodeTime } from "../../models/episodeTime";
 import { TimeTravels } from "../timeTravels";
 import { TimeTravelType } from "../../models/constants/enum/timeTravelType";
 
-export class S0201 extends EventsProvider {
+export class S0202 extends EventsProvider {
     public getEvents(): DarkEvent[] {
         let events: DarkEvent[] = [];
 

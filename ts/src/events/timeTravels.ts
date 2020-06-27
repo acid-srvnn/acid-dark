@@ -114,6 +114,24 @@ export class TimeTravels {
         ]
     }
 
+    public static tt231: TimeTravel = {
+        from: TimeLine.t1986,
+        to: TimeLine.t1953,
+        device: TimeTravelDevice.bunkerDeviceV1,
+        location: '',
+        persons: [{ person: DarkPersons.helgeDoppler, personTime: AgeGroup.young }
+        ]
+    }
+
+    public static tt232: TimeTravel = {
+        from: TimeLine.t1986,
+        to: TimeLine.t2019,
+        device: TimeTravelDevice.tannhausDevice,
+        location: '',
+        persons: [{ person: DarkPersons.claudiaTiedemann, personTime: AgeGroup.adult }
+        ]
+    }
+
     public static tt224: TimeTravel = {
         from: TimeLine.t1986,
         to: TimeLine.t2019,
